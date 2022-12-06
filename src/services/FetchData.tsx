@@ -18,6 +18,5 @@ export const useData = () => {
     return { todos, setTodos }
   };
   
-
   export default useData;
   

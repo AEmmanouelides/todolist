@@ -40,10 +40,8 @@
           "avoidEscape": true
         }
       ],
-      "eol-last": "warn",
       "import/prefer-default-export": "off",
-      "react/prop-types": "off",
-      "no-unused-vars": "warn"
-    }
+      "react/prop-types": "off"
+      }
   }
   

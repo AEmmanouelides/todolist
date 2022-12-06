@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - <a href="https://reactjs.org/docs/context.html" rel="nofollow" target='_blank'>React Context</a> library was used to pass Todos data through the component tree without having to pass props down manually at every level.
 - `SCSS` preprocessor was used for stylesheets management. 
 - `Screenshots` of the running app can be found at `/screenshots`
+- *UPDATE* - A <a href="https://redux.js.org/" rel="nofollow" target='_blank'>`Redux`</a> Store was created to manage and show the completed todos.
 
 ## Available Scripts
 
