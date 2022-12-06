@@ -4,7 +4,6 @@ import { TodoObj } from '../../interfaces/Todo';
 import { Todo } from '../Todo/Todo';
 import './TodoList.scss';
 import { addTodo, removeTodo } from '../../store/actions/todosActions';
-
 import { useDispatch } from 'react-redux';
 
 export const TodoList = () => {
@@ -12,18 +11,18 @@ export const TodoList = () => {
 
   const dispatch = useDispatch();
 
-  const onAddTodo = (todo: string) => {
+  const onAddTodo = (todo: TodoObj) => {
     dispatch(addTodo(todo));
   };
 
-  const onRemoveTodo = (todo: string) => {
+  const onRemoveTodo = (todo: TodoObj) => {
     dispatch(removeTodo(todo));
   };
 
   const handleDelete = (id: number) => {
     const updateTodos = todos.filter((todo: TodoObj) => {
       if (todo.id === id) {
-        onRemoveTodo(todo.title)
+        onRemoveTodo(todo)
       }
       return todo.id !== id
     });
@@ -33,7 +32,12 @@ export const TodoList = () => {
   const toggleCheck = (id: number) => {
     const updateTodos = todos.map((todo: TodoObj) => {
       if (todo.id === id) {
-        onAddTodo(todo.title)
+        if (!todo.completed) {
+          onAddTodo(todo)
+        } else {
+          onRemoveTodo(todo)
+        }
+
         return {
           ...todo,
           completed: !todo.completed,
@@ -57,7 +61,7 @@ export const TodoList = () => {
       {todos.length ? (
         <div className="todo-list-content">
           {todos.map((todoItem: TodoObj) => (
-            <div className="todoItem">
+            <div className="todoItem" key={todoItem.id}>
               <Todo
                 key={todoItem.id}
                 title={todoItem.title}

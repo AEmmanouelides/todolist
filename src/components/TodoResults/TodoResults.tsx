@@ -23,8 +23,8 @@ export const TodoResults = () => {
       }
       {calculateChecked()}
       {
-        doneTodos.map((todo: any) => {
-          return (<div className='done-todo'>{todo}</div>)
+        doneTodos.map((todo: TodoObj) => {
+          return (<div className='done-todo' key={todo.id}>{todo.title}</div>)
         })
       }
     </div>

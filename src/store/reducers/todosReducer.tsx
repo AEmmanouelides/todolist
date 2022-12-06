@@ -1,7 +1,8 @@
-import { Action, RemoveAction } from '../actions/todosActions';
+import { TodoObj } from '../../interfaces/Todo';
+import { AddAction, RemoveAction } from '../actions/todosActions';
 
 export interface TodosState {
-    todos: string[];
+    todos: TodoObj[];
 }
 
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
 
 export const todosReducer = (
   state: TodosState = initialState,
-  action: Action | RemoveAction
+  action: AddAction | RemoveAction
 ) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -18,7 +19,7 @@ export const todosReducer = (
     case 'REMOVE_TODO':
         return {   
             ...state,
-            todos: state.todos.filter((item) => item !== action.payload)};
+            todos: state.todos.filter(item => item.id !== action.payload.id)}
     default:
       return state;
   }

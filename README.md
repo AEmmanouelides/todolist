@@ -6,6 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - The app is responsive.
 - Data are fetched into the app by using `Fetch` API (browser build-in tool) through a fake free api from <a href="http://jsonplaceholder.typicode.com/" rel="nofollow" target='_blank'>Jsonplaceholder</a>.
 - <a href="https://reactjs.org/docs/context.html" rel="nofollow" target='_blank'>React Context</a> library was used to pass Todos data through the component tree without having to pass props down manually at every level.
+- A `custom hook` was created to fetch the initial data. `/services/FetchData.tsx`
 - `SCSS` preprocessor was used for stylesheets management. 
 - `Screenshots` of the running app can be found at `/screenshots`
 - *UPDATE* - A <a href="https://redux.js.org/" rel="nofollow" target='_blank'>`Redux`</a> Store was created to manage and show the completed todos.

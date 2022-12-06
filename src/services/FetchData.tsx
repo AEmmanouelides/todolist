@@ -7,7 +7,9 @@ export const useData = () => {
     const getTodos = () => {
         fetch('http://jsonplaceholder.typicode.com/todos?userId=1')
         .then((response) => response.json())
-        .then((json) => setTodos(json))
+        .then((json) => {
+            setTodos(json)
+        })
         .catch((error) => console.error(error))
     }
 
@@ -19,4 +21,3 @@ export const useData = () => {
   };
   
   export default useData;
-  
