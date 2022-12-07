@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { TodosContext } from '../../context/TodoContext';
 import { TodoObj } from '../../interfaces/Todo';
 import './TodoResults.scss';
@@ -27,6 +28,9 @@ export const TodoResults = () => {
           return (<div className='done-todo' key={todo.id}>{todo.title}</div>)
         })
       }
+      <div className='moreDetails'>
+        <Link to="/finishedTodos">More details</Link>
+      </div>
     </div>
   );
 };
