@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `Screenshots` of the running app can be found at `/screenshots`
 - *UPDATE* - A <a href="https://redux.js.org/" rel="nofollow" target='_blank'>`Redux`</a> Store was created to manage and show the completed todos.
 - *UPDATE 2* - A new page was created to show more details (userId) about the completed todos.
-- <a href="https://reactrouter.com/en/main" rel="nofollow" target='_blank'>`React Router DOM`</a> npm package was used to implement dynamic routing in the app.
+- *UPDATE 3* - <a href="https://reactrouter.com/en/main" rel="nofollow" target='_blank'>`React Router DOM`</a> npm package was used to implement dynamic routing in the app.
 
 ## Available Scripts
 
